@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(90deg, white, #f2796948);
+}
+
+nav {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #294D67;
+    padding: 2vh 0;
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    display: flex;
+    margin-right: 4px;
+    justify-content: flex-end;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li {
+    margin: 0 1vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.tasktrack {
+    color: #FFEDE1;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-left: 6px;
+}
+
+.home,
+.about,
+.github {
+    color: #FFEDE1;
+    display: block;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: white;
+    border-bottom: 2px solid lightpink;
+}
+
+.container {
+    position: relative;
+    margin: 10vh auto 0;
+
+    background-color: #fff;
+    text-align: center;
+    width: 40vw;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.heading {
+    font-size: 2.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f27969e1;
+}
+
+.delete_button {
+    margin-top: 10px;
+    padding: 3px;
+    border-radius: 4px;
+    border: none;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.delete_button:hover {
+    background-color: #F27A69;
+    color: white;
+}
+
+
+.tasks {
+    list-style-type: none;
+    background-color: white;
+    padding: 3%;
+    width: 25vw;
+    margin: 5px auto;
+}
+
+.tasks_individual {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    margin: 6px auto;
+    border-radius: 8px;
+    background-color: rgba(211, 211, 211, 0.252);
+    font-size: 16px;
+    padding: 16px;
+}
+
+.small-trademark {
+    font-size: 0.5em;
+    vertical-align: super;
+}
+
+.no-task {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container a {
+    margin-top: 0.7px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(211, 211, 211, 0.252);
+    transition: color 0.4s ease, background-color 0.4s ease, border 0.4s ease;
+}
+
+.container a:hover {
+    background-color: #F27A69;
+    color: white;
+    border-color: white;
+}
+
+.task-header {
+    font-size: 20px;
+}
+
+.lessimp {
+    font-size: 15px;
+}
+
+#quote {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    margin-top: 5vh;
+}

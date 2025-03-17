@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskTrack</title>
+    <link rel="stylesheet" href="static/tasks.css">
+
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="tasktrack">
+                <h1>TaskTrack <span class="small-trademark">&trade;</span></h1>
+            </div>
+            <ul class="nav-options">
+                <li><a href="#" class="home">Home</a></li>
+                <li><a href="#" class="about">About</a></li>
+                <li><a href="#" class="github">Github</a></li>
+            </ul>
+        </nav>
+        <h1>TaskTrack</h1>
+    </header>
+
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="heading">Here are all you tasks</h3>
+        {% if tasks %}
+        <ul class="tasks">
+            {% for task in tasks %}
+            <li class="tasks_individual">
+                <div class="task-header">{{task.name}}</div>
+                <p class="lessimp"><strong></strong>{{task.date}}</p>
+                <p class="lessimp"><strong></strong>{{task.time}}</p>
+                <p class="lessimp"><strong></strong>{{task.desc}}</p>
+                <form action="{{url_for('delete_task',task_name=task.name)}}" method="POST">
+                    <button type="submit" class="delete_button">Delete task</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="no-task">No tasks added yet.</p>
+        {% endif %}
+        <br>
+        <a href="/form" class="add-task-button">Add Task</a>
+    </div>
+    <div>
+        <p id="quote">{{quote}}</p>
+    </div>
+</body>
+
+</html>

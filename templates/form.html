@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+
+    <link rel="stylesheet" href="static/form.css">
+
+    <nav class="topnav">
+        <div class="name">
+            TaskTrack
+        </div>
+        <ul>
+            <li><a href="tasks.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="more.html">More</a></li>
+        </ul>
+
+    </nav>
+
+
+
+</head>
+
+
+
+
+
+
+<body>
+
+    <div class="form_container">
+        <div class="form_title">
+            <h1>Add Task</h1>
+        </div>
+        <div class="form_body">
+
+            <form action="/form" method="POST">
+
+                <label for="the_task_name"></label><br>
+                <input type="text" name="task_name" placeholder="Enter your task" id="the_task_name" required> <br>
+
+                <label for="the_task_date"></label><br>
+                <input type="text" name="task_date" id="the_task_date" placeholder="Enter Date"
+                    onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
+                <br>
+
+                <label for="the_task_time"></label><br>
+                <input type="text" name="task_time" id="the_task_time" placeholder="Enter Time"
+                    onfocus="(this.type='time')" onblur="if(!this.value) this.type='text'">
+                <br>
+                <label for="the_task_description"></label><br>
+                <textarea name="task_description" id="the_task_description" rows="4" cols="24"
+                    placeholder="Enter task description"></textarea>
+                <br>
+
+                <label for="the_task_type"></label><br>
+                <select name="task_type" id="the_task_type">
+                    <option value="Regular">Regular</option>
+                    <option value="Priority">Priority</option>
+                </select>
+                <br>
+                <input class="submit-button" type="submit" value="Add Task">
+                <br>
+            </form>
+
+        </div>
+
+
+
+    </div>
+</body>
+
+
+
+
+</html>
